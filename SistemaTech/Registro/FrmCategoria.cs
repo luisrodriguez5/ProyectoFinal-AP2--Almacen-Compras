@@ -62,7 +62,7 @@ namespace SistemaTech.Registro
             descripcionTextBox.ReadOnly = !valor;
             CodigotextBox2.ReadOnly = !valor;
             CategoriaIdTextBox.ReadOnly = !valor;
-            textBox1.ReadOnly = !valor;
+
 
         }
 
@@ -75,58 +75,20 @@ namespace SistemaTech.Registro
                 btnNuevo.Enabled = true;
                 btnGuardar.Enabled = true;
                 btnEliminae.Enabled = false;
-                btnFiltrar.Enabled = true;
             }
+
             else
             {
                 Habilitar(false);
                 btnNuevo.Enabled = true;
                 btnGuardar.Enabled = false;
                 btnEliminae.Enabled = false;
-                btnFiltrar.Enabled = false;
+
             }
         }
-        private void OcultarCulunas()
-        {
-            dataListadoCategoria.Columns[0].Visible = false;
-            dataListadoCategoria.Columns[1].Visible = false;
-            
-        }
+     
 
-        private void Listar()
-        {
-
-            if (comboBox1.SelectedIndex == 0)
-            {
-
-                Lista = PresentancionBLL.GetListAll();
-
-            }
-            if (comboBox1.SelectedIndex == 1)
-            {
-                int id = Utilidades.TOINT(textBox1.Text);
-                Lista = BLL.PresentancionBLL.GetList(p => p.CategoriaId == id);
-
-            }
-            if (comboBox1.SelectedIndex == 2)
-            {
-                Lista = PresentancionBLL.GetList(p => p.Nombre == textBox1.Text);
-
-            }
-            if (comboBox1.SelectedIndex == 3)
-            {
-                Lista = BLL.PresentancionBLL.GetList(p => p.Descripcion == textBox1.Text);
-
-            }
-            if(comboBox1.SelectedIndex == 4)
-            {
-                int codigo = Utilidades.TOINT(textBox1.Text);
-                Lista = PresentancionBLL.GetList(P => P.Codigo == codigo);
-            }
-
-            dataListadoCategoria.DataSource = Lista;
-            lblTotal.Text = "Total De Registros: " + Convert.ToString(dataListadoCategoria.Rows.Count);
-        }
+  
 
 
         private void FrmCategoria_Load(object sender, EventArgs e)
@@ -144,60 +106,9 @@ namespace SistemaTech.Registro
 
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
-        {
-            Listar();
-            OcultarCulunas();
-        }
+       
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            IsNuevo = true;
-            Botones();
-            Habilitar(true);
-
-            if (comboBox1.SelectedIndex == 0)
-            {
-                textBox1.Clear();
-                errorProvider1.Clear();
-                textBox1.Enabled = false;
-                Listar();
-                OcultarCulunas();
-            }
-            if (comboBox1.SelectedIndex == 1)
-            {
-                textBox1.Clear();
-                errorProvider1.Clear();
-                textBox1.Enabled = true;
-                Listar();
-                OcultarCulunas();
-            }
-            if (comboBox1.SelectedIndex == 2)
-            {
-                textBox1.Clear();
-                errorProvider1.Clear();
-                textBox1.Enabled = true;
-                Listar();
-                OcultarCulunas();
-            }
-            if (comboBox1.SelectedIndex == 3)
-            {
-                textBox1.Clear();
-                errorProvider1.Clear();
-                textBox1.Enabled = true;
-                Listar();
-                OcultarCulunas();
-            }
-            else
-            {
-
-                textBox1.Clear();
-                dataListadoCategoria.DataSource = null;
-
-
-            }
-        }
-
+    
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             IsNuevo = true;
@@ -244,7 +155,7 @@ namespace SistemaTech.Registro
             {
                 categoria = LlenarCampos();
 
-                if (PresentancionBLL.Guardar(categoria))
+                if (CategoriaBLL.Guardar(categoria))
                 {
                     MesajeOk("Se Guardo con exito");
                     Limpiar();
@@ -255,14 +166,7 @@ namespace SistemaTech.Registro
 
         }
 
-        private void dataListadoCategoria_DoubleClick(object sender, EventArgs e)
-        {
-            this.CategoriaIdTextBox.Text = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["CategoriaId"].Value);
-            this.CodigotextBox2.Text = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["Codigo"].Value);
-            this.nombreTextBox.Text = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["Nombre"].Value);
-            this.descripcionTextBox.Text = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["Descripcion"].Value);
-            this.tabControl1.SelectedIndex = 1;
-        }
+  
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -278,7 +182,7 @@ namespace SistemaTech.Registro
                 int id = Utilidades.TOINT(CategoriaIdTextBox.Text);
                 Categoria categoria = new Categoria();
 
-                categoria = PresentancionBLL.Buscar(p => p.CategoriaId == id);
+                categoria = CategoriaBLL.Buscar(p => p.CategoriaId == id);
 
                 if (categoria != null)
                 {
@@ -295,64 +199,8 @@ namespace SistemaTech.Registro
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                this.dataListadoCategoria.Columns[0].Visible = true;
-            }
-            else
-            {
-                this.dataListadoCategoria.Columns[0].Visible = false;
-            }
-        }
 
-        private void dataListadoCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dataListadoCategoria.Columns["Eliminar"].Index)
-            {
-                DataGridViewCheckBoxCell ChkEliminar = (DataGridViewCheckBoxCell)dataListadoCategoria.Rows[e.RowIndex].Cells["Eliminar"];
-                ChkEliminar.Value = !Convert.ToBoolean(ChkEliminar.Value);
-            }
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DialogResult Opc;
-                Opc = MessageBox.Show("Realmente desea Eliminar los registros", "....Sistema De Almacen....", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (Opc == DialogResult.OK)
-                {
-                    int Codigo = Utilidades.TOINT(CategoriaIdTextBox.Text); ;
-
-                    foreach (DataGridViewRow row in dataListadoCategoria.Rows)
-                    {
-                        if (Convert.ToBoolean(row.Cells[0].Value))
-                        {
-                            Codigo = Convert.ToInt32(row.Cells[1].Value);
-
-                            if (PresentancionBLL.Eliminar(PresentancionBLL.Buscar(p => p.CategoriaId == Codigo)))
-                            {
-                                MesajeOk("Se Elimino correta mente el registro");
-
-                            }
-                            else
-                            {
-                                MesajeError("No ah podido eliminar el registro");
-                            }
-                        }
-                    }
-                    Listar();
-                }
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("No se pudo eliminar");
-            }
-
-        }
+ 
 
         private void btnEliminae_Click(object sender, EventArgs e)
         {
@@ -368,7 +216,7 @@ namespace SistemaTech.Registro
                 {
                     int id = Utilidades.TOINT(CategoriaIdTextBox.Text);
 
-                    if (PresentancionBLL.Eliminar(PresentancionBLL.Buscar(p => p.CategoriaId == id)))
+                    if (CategoriaBLL.Eliminar(CategoriaBLL.Buscar(p => p.CategoriaId == id)))
                     {
                         Limpiar();
                         MesajeOk("Producto Eliminado con exito");
@@ -377,6 +225,11 @@ namespace SistemaTech.Registro
                         MesajeError("No se ah podido Eliminar el producto");
                 }
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

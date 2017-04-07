@@ -13,10 +13,11 @@ namespace Entidades
         public int ProveedorId { get; set; }
         public string Sector_Comercial { get; set; }
         public string Razon_Social { get; set; }
-        public string Num_Documetos { get; set; }
+        public int Num_Documento { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Email { get; set; }
+
         public virtual ICollection<Ingreso> Relacion  { get; set; }
 
         public Proveedor()

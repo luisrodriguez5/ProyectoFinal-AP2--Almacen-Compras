@@ -48,15 +48,15 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnEliminae = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnEliminae = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
             productoIdLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             productoIdLabel.ForeColor = System.Drawing.Color.Maroon;
             productoIdLabel.Location = new System.Drawing.Point(35, 37);
             productoIdLabel.Name = "productoIdLabel";
-            productoIdLabel.Size = new System.Drawing.Size(127, 16);
+            productoIdLabel.Size = new System.Drawing.Size(124, 16);
             productoIdLabel.TabIndex = 0;
             productoIdLabel.Text = "PresentancionId:";
             // 
@@ -87,7 +87,7 @@
             descripcionLabel.ForeColor = System.Drawing.Color.Maroon;
             descripcionLabel.Location = new System.Drawing.Point(65, 134);
             descripcionLabel.Name = "descripcionLabel";
-            descripcionLabel.Size = new System.Drawing.Size(97, 16);
+            descripcionLabel.Size = new System.Drawing.Size(95, 16);
             descripcionLabel.TabIndex = 6;
             descripcionLabel.Text = "Descripcion:";
             // 
@@ -98,7 +98,7 @@
             nombreLabel.ForeColor = System.Drawing.Color.Maroon;
             nombreLabel.Location = new System.Drawing.Point(93, 69);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(69, 16);
+            nombreLabel.Size = new System.Drawing.Size(67, 16);
             nombreLabel.TabIndex = 4;
             nombreLabel.Text = "Nombre:";
             // 
@@ -257,6 +257,66 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Presentacion";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = global::SistemaTech.Properties.Resources.Search_24px;
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(278, 28);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(81, 35);
+            this.btnBuscar.TabIndex = 5;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEliminae
+            // 
+            this.btnEliminae.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminae.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminae.Image = global::SistemaTech.Properties.Resources.Delete_26px_1;
+            this.btnEliminae.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminae.Location = new System.Drawing.Point(334, 222);
+            this.btnEliminae.Name = "btnEliminae";
+            this.btnEliminae.Size = new System.Drawing.Size(84, 34);
+            this.btnEliminae.TabIndex = 6;
+            this.btnEliminae.Text = "E&liminar";
+            this.btnEliminae.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminae.UseVisualStyleBackColor = true;
+            this.btnEliminae.Click += new System.EventHandler(this.btnEliminae_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardar.Image = global::SistemaTech.Properties.Resources.Save_26px;
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardar.Location = new System.Drawing.Point(215, 223);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(84, 34);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
+            this.btnNuevo.Image = global::SistemaTech.Properties.Resources.Create_New_32px;
+            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevo.Location = new System.Drawing.Point(105, 221);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(81, 34);
+            this.btnNuevo.TabIndex = 7;
+            this.btnNuevo.Text = "&Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.AutoScroll = true;
@@ -318,66 +378,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(94, 62);
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscar.Image = global::SistemaTech.Properties.Resources.Search_24px;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(278, 28);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(81, 35);
-            this.btnBuscar.TabIndex = 5;
-            this.btnBuscar.Text = "&Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // btnEliminae
-            // 
-            this.btnEliminae.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminae.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminae.Image = global::SistemaTech.Properties.Resources.Delete_26px_1;
-            this.btnEliminae.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminae.Location = new System.Drawing.Point(334, 222);
-            this.btnEliminae.Name = "btnEliminae";
-            this.btnEliminae.Size = new System.Drawing.Size(84, 34);
-            this.btnEliminae.TabIndex = 6;
-            this.btnEliminae.Text = "E&liminar";
-            this.btnEliminae.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminae.UseVisualStyleBackColor = true;
-            this.btnEliminae.Click += new System.EventHandler(this.btnEliminae_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Image = global::SistemaTech.Properties.Resources.Save_26px;
-            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(215, 223);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(84, 34);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevo.Image = global::SistemaTech.Properties.Resources.Create_New_32px;
-            this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(105, 221);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(81, 34);
-            this.btnNuevo.TabIndex = 7;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // FormPresentacion
             // 

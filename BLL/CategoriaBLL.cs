@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class PresentancionBLL
+    public class CategoriaBLL
     {
         public static bool Guardar(Categoria categoria)
         {

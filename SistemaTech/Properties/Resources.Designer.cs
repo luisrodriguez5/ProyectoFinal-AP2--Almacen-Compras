@@ -63,6 +63,16 @@ namespace SistemaTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_p {
+            get {
+                object obj = ResourceManager.GetObject("agregar_p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Create_New_32px {
             get {
                 object obj = ResourceManager.GetObject("Create New_32px", resourceCulture);
@@ -93,6 +103,16 @@ namespace SistemaTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Remove {
+            get {
+                object obj = ResourceManager.GetObject("Remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Save_26px {
             get {
                 object obj = ResourceManager.GetObject("Save_26px", resourceCulture);
@@ -116,6 +136,16 @@ namespace SistemaTech.Properties {
         internal static System.Drawing.Bitmap testtube {
             get {
                 object obj = ResourceManager.GetObject("testtube", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Xbox_Cross_32px {
+            get {
+                object obj = ResourceManager.GetObject("Xbox Cross_32px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

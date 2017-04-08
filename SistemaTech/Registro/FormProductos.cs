@@ -21,7 +21,7 @@ namespace SistemaTech.Registro
         private static FormProductos _Instacia;
 
         
-        public FormProductos GetInstancia()
+        public static FormProductos GetInstancia()
         {
            if(_Instacia == null)
             {
@@ -237,8 +237,8 @@ namespace SistemaTech.Registro
                     descripcionTextBox.Text = producto.Descripcion;
                     nombreTextBox.Text = producto.Nombre;
                     codigoTextBox.Text = producto.Costo.ToString();
-                    //texIdCategoria.Text = Convert.ToString(producto.CategoriaId);
-                    //textCategoria.Text = producto.Nombre_Categoria;
+                    texIdCategoria.Text = Convert.ToString(producto.CategoriaId);
+                    textCategoria.Text = producto.Nombre_Categoria;
                     //PreciotextBox.Text = producto.Precio.ToString();
                     //fechaIngresoDateTimePicker.Value = producto.FechaIngreso;
                 }
@@ -285,12 +285,15 @@ namespace SistemaTech.Registro
         private void btnBuscarCategotia_Click(object sender, EventArgs e)
         {
             FormVistaCategoria frm = new FormVistaCategoria();
-            this.Hide();
             frm.ShowDialog();
 
             
             
         }
 
+        private void FormProductos_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _Instacia = null;
+        }
     }
 }

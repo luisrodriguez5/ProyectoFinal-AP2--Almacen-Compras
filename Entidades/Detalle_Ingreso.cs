@@ -22,6 +22,7 @@ namespace Entidades
         public Ingreso Ingreso { get; set; }
         public Detalle_Ingreso()
         {
+            Ingreso = new Ingreso();
             
         }
 

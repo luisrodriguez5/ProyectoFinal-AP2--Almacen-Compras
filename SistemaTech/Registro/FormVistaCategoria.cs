@@ -121,16 +121,16 @@ namespace SistemaTech.Registro
 
         private void dataListadoCategoria_DoubleClick(object sender, EventArgs e)
         {
-            FormProductos frm = new FormProductos();
-     
+            FormProductos frm =  FormProductos.GetInstancia();
+            string var1, var2;
            
-             frm.texIdCategoria.Text= Convert.ToString(dataListadoCategoria.CurrentRow.Cells["CategoriaId"].Value);
-            frm.textCategoria.Text = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["Nombre"].Value);
+            var1 = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["CategoriaId"].Value);
+            var2 = Convert.ToString(dataListadoCategoria.CurrentRow.Cells["Nombre"].Value);
 
-            
-            
-            
-            frm.Show();
+
+
+
+            frm.setCategoria(var1, var2);
             
 
             this.Hide();

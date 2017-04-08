@@ -49,6 +49,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscarCategotia = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminae = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // productoIdLabel
@@ -106,7 +108,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 65);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(810, 319);
+            this.tabControl1.Size = new System.Drawing.Size(568, 491);
             this.tabControl1.TabIndex = 14;
             // 
             // tabPage2
@@ -116,7 +118,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(802, 293);
+            this.tabPage2.Size = new System.Drawing.Size(560, 465);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Registro De Productos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -143,7 +145,7 @@
             this.groupBox1.Controls.Add(nombreLabel);
             this.groupBox1.Location = new System.Drawing.Point(17, 22);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(753, 247);
+            this.groupBox1.Size = new System.Drawing.Size(480, 414);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos";
@@ -151,23 +153,26 @@
             // 
             // comboBoxCategoria
             // 
+            this.comboBoxCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.comboBoxCategoria.FormattingEnabled = true;
-            this.comboBoxCategoria.Location = new System.Drawing.Point(485, 101);
+            this.comboBoxCategoria.Location = new System.Drawing.Point(77, 259);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
-            this.comboBoxCategoria.Size = new System.Drawing.Size(166, 21);
+            this.comboBoxCategoria.Size = new System.Drawing.Size(137, 21);
             this.comboBoxCategoria.TabIndex = 18;
             // 
             // texIdCategoria
             // 
-            this.texIdCategoria.Location = new System.Drawing.Point(486, 30);
+            this.texIdCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.texIdCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.texIdCategoria.Location = new System.Drawing.Point(220, 218);
             this.texIdCategoria.Name = "texIdCategoria";
-            this.texIdCategoria.Size = new System.Drawing.Size(69, 20);
+            this.texIdCategoria.Size = new System.Drawing.Size(61, 20);
             this.texIdCategoria.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(410, 104);
+            this.label3.Location = new System.Drawing.Point(6, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 14;
@@ -175,15 +180,17 @@
             // 
             // textCategoria
             // 
-            this.textCategoria.Location = new System.Drawing.Point(485, 60);
+            this.textCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.textCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textCategoria.Location = new System.Drawing.Point(77, 218);
             this.textCategoria.Name = "textCategoria";
-            this.textCategoria.Size = new System.Drawing.Size(166, 20);
+            this.textCategoria.Size = new System.Drawing.Size(137, 20);
             this.textCategoria.TabIndex = 13;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(427, 63);
+            this.label2.Location = new System.Drawing.Point(25, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 12;
@@ -246,12 +253,22 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Productos";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SistemaTech.Properties.Resources.pencil_scale;
+            this.pictureBox1.Location = new System.Drawing.Point(164, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnBuscarCategotia
             // 
             this.btnBuscarCategotia.Image = global::SistemaTech.Properties.Resources.Search_24px;
-            this.btnBuscarCategotia.Location = new System.Drawing.Point(657, 53);
+            this.btnBuscarCategotia.Location = new System.Drawing.Point(287, 212);
             this.btnBuscarCategotia.Name = "btnBuscarCategotia";
-            this.btnBuscarCategotia.Size = new System.Drawing.Size(56, 30);
+            this.btnBuscarCategotia.Size = new System.Drawing.Size(47, 30);
             this.btnBuscarCategotia.TabIndex = 17;
             this.btnBuscarCategotia.UseVisualStyleBackColor = true;
             this.btnBuscarCategotia.Click += new System.EventHandler(this.btnBuscarCategotia_Click);
@@ -273,9 +290,9 @@
             // 
             this.btnEliminae.Image = global::SistemaTech.Properties.Resources.Delete_26px_1;
             this.btnEliminae.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminae.Location = new System.Drawing.Point(262, 207);
+            this.btnEliminae.Location = new System.Drawing.Point(278, 335);
             this.btnEliminae.Name = "btnEliminae";
-            this.btnEliminae.Size = new System.Drawing.Size(72, 34);
+            this.btnEliminae.Size = new System.Drawing.Size(77, 32);
             this.btnEliminae.TabIndex = 10;
             this.btnEliminae.Text = "E&liminar";
             this.btnEliminae.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -286,9 +303,9 @@
             // 
             this.btnGuardar.Image = global::SistemaTech.Properties.Resources.Save_26px;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(161, 207);
+            this.btnGuardar.Location = new System.Drawing.Point(177, 335);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(79, 34);
+            this.btnGuardar.Size = new System.Drawing.Size(84, 32);
             this.btnGuardar.TabIndex = 9;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -299,9 +316,9 @@
             // 
             this.btnNuevo.Image = global::SistemaTech.Properties.Resources.Create_New_32px;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(62, 207);
+            this.btnNuevo.Location = new System.Drawing.Point(78, 335);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(77, 34);
+            this.btnNuevo.Size = new System.Drawing.Size(82, 32);
             this.btnNuevo.TabIndex = 8;
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -313,19 +330,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(849, 401);
+            this.ClientSize = new System.Drawing.Size(629, 570);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema De Almacen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormProductos_FormClosing);
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +373,6 @@
         public System.Windows.Forms.TextBox nombreTextBox;
         public System.Windows.Forms.TextBox descripcionTextBox;
         public System.Windows.Forms.ComboBox comboBoxCategoria;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

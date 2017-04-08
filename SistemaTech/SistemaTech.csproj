@@ -88,6 +88,12 @@
     <Compile Include="Consulta\FormConsultaProveedores.Designer.cs">
       <DependentUpon>FormConsultaProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\ConsultaPresentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaPresentacion.Designer.cs">
+      <DependentUpon>ConsultaPresentacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +132,23 @@
     <Compile Include="Registro\FormVistaCategoria.Designer.cs">
       <DependentUpon>FormVistaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro\FormVistaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\FormVistaProveedor.Designer.cs">
+      <DependentUpon>FormVistaProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registro\FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Registro\FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\FrmProductos_Ingreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\FrmProductos_Ingreso.Designer.cs">
+      <DependentUpon>FrmProductos_Ingreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Consulta\ConsultaCategoria.resx">
@@ -141,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\FormConsultaProveedores.resx">
       <DependentUpon>FormConsultaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\ConsultaPresentacion.resx">
+      <DependentUpon>ConsultaPresentacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -170,8 +191,14 @@
     <EmbeddedResource Include="Registro\FormVistaCategoria.resx">
       <DependentUpon>FormVistaCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registro\FormVistaProveedor.resx">
+      <DependentUpon>FormVistaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registro\FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\FrmProductos_Ingreso.resx">
+      <DependentUpon>FrmProductos_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -208,6 +235,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaTechDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\pencil-scale.png" />
     <None Include="Resources\Remove.png" />
     <None Include="Resources\agregar_p.png" />
     <None Include="Resources\Xbox Cross_32px.png" />

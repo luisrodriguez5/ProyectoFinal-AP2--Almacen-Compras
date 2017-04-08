@@ -41,17 +41,16 @@
             this.textProveedor = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblresult = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.textPrcioCompra = new System.Windows.Forms.TextBox();
             this.textStock = new System.Windows.Forms.TextBox();
-            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.ArticulotextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.itbiStextBox = new System.Windows.Forms.TextBox();
@@ -60,15 +59,17 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateFecha = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.productoIdTextBox = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.textProductoId = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnBuscarArticulo = new System.Windows.Forms.Button();
             this.btnBuscarProveedor = new System.Windows.Forms.Button();
             this.btnEliminae = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.productoIdTextBox = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblresult = new System.Windows.Forms.Label();
             productoIdLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
@@ -171,6 +172,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textProductoId);
             this.groupBox1.Controls.Add(this.lblresult);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.groupBox2);
@@ -197,6 +199,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compra";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblresult
+            // 
+            this.lblresult.AutoSize = true;
+            this.lblresult.Location = new System.Drawing.Point(108, 401);
+            this.lblresult.Name = "lblresult";
+            this.lblresult.Size = new System.Drawing.Size(22, 13);
+            this.lblresult.TabIndex = 27;
+            this.lblresult.Text = "0.0";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(26, 401);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(85, 13);
+            this.lblTotal.TabIndex = 26;
+            this.lblTotal.Text = "Total Comprado:";
             // 
             // groupBox2
             // 
@@ -214,9 +235,9 @@
             this.groupBox2.Controls.Add(this.btnBuscarArticulo);
             this.groupBox2.Controls.Add(this.ArticulotextBox);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(9, 126);
+            this.groupBox2.Location = new System.Drawing.Point(9, 135);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(930, 248);
+            this.groupBox2.Size = new System.Drawing.Size(930, 239);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             // 
@@ -227,24 +248,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(893, 122);
             this.dataGridView1.TabIndex = 31;
-            // 
-            // button2
-            // 
-            this.button2.Image = global::SistemaTech.Properties.Resources.Remove;
-            this.button2.Location = new System.Drawing.Point(857, 48);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(43, 23);
-            this.button2.TabIndex = 30;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Image = global::SistemaTech.Properties.Resources.agregar_p;
-            this.button1.Location = new System.Drawing.Point(857, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 27);
-            this.button1.TabIndex = 29;
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker2
             // 
@@ -297,15 +300,6 @@
             this.textStock.Name = "textStock";
             this.textStock.Size = new System.Drawing.Size(166, 20);
             this.textStock.TabIndex = 22;
-            // 
-            // btnBuscarArticulo
-            // 
-            this.btnBuscarArticulo.Image = global::SistemaTech.Properties.Resources.Search_24px;
-            this.btnBuscarArticulo.Location = new System.Drawing.Point(258, 12);
-            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
-            this.btnBuscarArticulo.Size = new System.Drawing.Size(37, 29);
-            this.btnBuscarArticulo.TabIndex = 20;
-            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
             // 
             // ArticulotextBox
             // 
@@ -382,6 +376,71 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Fecha:";
             // 
+            // productoIdTextBox
+            // 
+            this.productoIdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.productoIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.productoIdTextBox.Location = new System.Drawing.Point(85, 56);
+            this.productoIdTextBox.Name = "productoIdTextBox";
+            this.productoIdTextBox.Size = new System.Drawing.Size(100, 20);
+            this.productoIdTextBox.TabIndex = 1;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.AutoScroll = true;
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(986, 469);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Registro De Productos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(12, 55);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(994, 495);
+            this.tabControl1.TabIndex = 16;
+            // 
+            // textProductoId
+            // 
+            this.textProductoId.Location = new System.Drawing.Point(85, 117);
+            this.textProductoId.Name = "textProductoId";
+            this.textProductoId.Size = new System.Drawing.Size(69, 20);
+            this.textProductoId.TabIndex = 28;
+            // 
+            // button2
+            // 
+            this.button2.Image = global::SistemaTech.Properties.Resources.Remove;
+            this.button2.Location = new System.Drawing.Point(857, 48);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(43, 23);
+            this.button2.TabIndex = 30;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = global::SistemaTech.Properties.Resources.agregar_p;
+            this.button1.Location = new System.Drawing.Point(857, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 27);
+            this.button1.TabIndex = 29;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarArticulo
+            // 
+            this.btnBuscarArticulo.Image = global::SistemaTech.Properties.Resources.Search_24px;
+            this.btnBuscarArticulo.Location = new System.Drawing.Point(258, 12);
+            this.btnBuscarArticulo.Name = "btnBuscarArticulo";
+            this.btnBuscarArticulo.Size = new System.Drawing.Size(37, 29);
+            this.btnBuscarArticulo.TabIndex = 20;
+            this.btnBuscarArticulo.UseVisualStyleBackColor = true;
+            this.btnBuscarArticulo.Click += new System.EventHandler(this.btnBuscarArticulo_Click);
+            // 
             // btnBuscarProveedor
             // 
             this.btnBuscarProveedor.Image = global::SistemaTech.Properties.Resources.Search_24px;
@@ -390,6 +449,7 @@
             this.btnBuscarProveedor.Size = new System.Drawing.Size(56, 33);
             this.btnBuscarProveedor.TabIndex = 17;
             this.btnBuscarProveedor.UseVisualStyleBackColor = true;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // btnEliminae
             // 
@@ -427,54 +487,6 @@
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // productoIdTextBox
-            // 
-            this.productoIdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.productoIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.productoIdTextBox.Location = new System.Drawing.Point(85, 56);
-            this.productoIdTextBox.Name = "productoIdTextBox";
-            this.productoIdTextBox.Size = new System.Drawing.Size(100, 20);
-            this.productoIdTextBox.TabIndex = 1;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.AutoScroll = true;
-            this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(986, 469);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Registro De Productos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 55);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(994, 495);
-            this.tabControl1.TabIndex = 16;
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(26, 401);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(85, 13);
-            this.lblTotal.TabIndex = 26;
-            this.lblTotal.Text = "Total Comprado:";
-            // 
-            // lblresult
-            // 
-            this.lblresult.AutoSize = true;
-            this.lblresult.Location = new System.Drawing.Point(108, 401);
-            this.lblresult.Name = "lblresult";
-            this.lblresult.Size = new System.Drawing.Size(22, 13);
-            this.lblresult.TabIndex = 27;
-            this.lblresult.Text = "0.0";
-            // 
             // FormCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -485,6 +497,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "FormCompras";
             this.Text = "FormCompras";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCompras_FormClosing);
             this.Load += new System.EventHandler(this.FormCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -537,5 +550,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblresult;
         private System.Windows.Forms.Label lblTotal;
+        public System.Windows.Forms.TextBox textProductoId;
     }
 }

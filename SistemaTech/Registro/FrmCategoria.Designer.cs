@@ -32,6 +32,7 @@
             System.Windows.Forms.Label productoIdLabel;
             System.Windows.Forms.Label descripcionLabel;
             System.Windows.Forms.Label nombreLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategoria));
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -294,6 +295,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCategoria";
             this.Text = "FrmCategoria";
             this.TransparencyKey = System.Drawing.Color.DimGray;

@@ -34,18 +34,26 @@ Email varchar(80),
 
 create table Ingresos(
 IngresoId int primary key identity(1,1),
-EmpleadoId int,
 ProvedorId int,
 Fecha int,
 NumIngreso varchar(20),
 Itbis decimal(4,2),
+ProductoId int,
+Nombre varchar(80),
+Costo_Compra decimal,
+Inventario_Inicial int,
+Inventario_Actual int,
+Fecha_Ingreso date,
+Fecha_Vencimiento date,
 );
+
+
+
 create table Detalle_Ingresos(
 Detalle_IngresoId int primary key identity(1,1),
 IngresoId int,
 Precio_Compra money,
 ProductoId int,
-Precio_Venta money,
 Inventario_Inicial int,
 Inventario_Actual int,
 Fecha_Ingreso date,

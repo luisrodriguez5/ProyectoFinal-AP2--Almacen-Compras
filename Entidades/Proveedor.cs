@@ -18,11 +18,11 @@ namespace Entidades
         public string Telefono { get; set; }
         public string Email { get; set; }
 
-        public virtual ICollection<Ingreso> Relacion  { get; set; }
+        
 
         public Proveedor()
         {
-            Relacion = new HashSet<Ingreso>();
+           
 
         }
 

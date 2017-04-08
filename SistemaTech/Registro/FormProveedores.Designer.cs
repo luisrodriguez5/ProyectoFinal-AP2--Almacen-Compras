@@ -35,6 +35,7 @@
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label4;
             System.Windows.Forms.Label label5;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProveedores));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label2 = new System.Windows.Forms.Label();
@@ -42,19 +43,19 @@
             this.RazonSocialTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.proveedorIdTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.comboBoxSector = new System.Windows.Forms.ComboBox();
-            this.comboBoxDocument = new System.Windows.Forms.ComboBox();
-            this.texNumDocumento = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.emailtextBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.texNumDocumento = new System.Windows.Forms.TextBox();
+            this.comboBoxDocument = new System.Windows.Forms.ComboBox();
+            this.comboBoxSector = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnEliminae = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.proveedorIdTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             productoIdLabel = new System.Windows.Forms.Label();
             descripcionLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -100,6 +101,39 @@
             nombreLabel.Size = new System.Drawing.Size(104, 16);
             nombreLabel.TabIndex = 4;
             nombreLabel.Text = "Razon Social:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.Black;
+            label3.Location = new System.Drawing.Point(9, 102);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(146, 16);
+            label3.TabIndex = 14;
+            label3.Text = "Tipo de documento:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label4.ForeColor = System.Drawing.Color.Black;
+            label4.Location = new System.Drawing.Point(81, 189);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(74, 16);
+            label4.TabIndex = 18;
+            label4.Text = "Telefono:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label5.ForeColor = System.Drawing.Color.Black;
+            label5.Location = new System.Drawing.Point(100, 238);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(55, 16);
+            label5.TabIndex = 21;
+            label5.Text = "Emaill:";
             // 
             // toolTip1
             // 
@@ -189,35 +223,44 @@
             this.groupBox1.Text = "Proveedor";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // proveedorIdTextBox
+            // emailtextBox1
             // 
-            this.proveedorIdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.proveedorIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.proveedorIdTextBox.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proveedorIdTextBox.Location = new System.Drawing.Point(155, 33);
-            this.proveedorIdTextBox.Name = "proveedorIdTextBox";
-            this.proveedorIdTextBox.Size = new System.Drawing.Size(112, 24);
-            this.proveedorIdTextBox.TabIndex = 1;
+            this.emailtextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.emailtextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emailtextBox1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailtextBox1.Location = new System.Drawing.Point(153, 235);
+            this.emailtextBox1.Name = "emailtextBox1";
+            this.emailtextBox1.Size = new System.Drawing.Size(263, 24);
+            this.emailtextBox1.TabIndex = 20;
             // 
-            // label1
+            // maskedTextBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(12, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 31);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Proveedores";
+            this.maskedTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.maskedTextBox1.Location = new System.Drawing.Point(155, 187);
+            this.maskedTextBox1.Mask = "000-000-0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(261, 21);
+            this.maskedTextBox1.TabIndex = 19;
             // 
-            // tabControl1
+            // texNumDocumento
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(14, 79);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(830, 431);
-            this.tabControl1.TabIndex = 19;
+            this.texNumDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.texNumDocumento.Location = new System.Drawing.Point(229, 100);
+            this.texNumDocumento.Name = "texNumDocumento";
+            this.texNumDocumento.Size = new System.Drawing.Size(180, 21);
+            this.texNumDocumento.TabIndex = 16;
+            // 
+            // comboBoxDocument
+            // 
+            this.comboBoxDocument.FormattingEnabled = true;
+            this.comboBoxDocument.Items.AddRange(new object[] {
+            "DNI",
+            "RUC"});
+            this.comboBoxDocument.Location = new System.Drawing.Point(153, 100);
+            this.comboBoxDocument.Name = "comboBoxDocument";
+            this.comboBoxDocument.Size = new System.Drawing.Size(70, 23);
+            this.comboBoxDocument.TabIndex = 15;
+            this.comboBoxDocument.Text = "RUC";
             // 
             // comboBoxSector
             // 
@@ -234,86 +277,6 @@
             this.comboBoxSector.Size = new System.Drawing.Size(110, 23);
             this.comboBoxSector.TabIndex = 13;
             this.comboBoxSector.Text = "Alimentos";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.Color.Black;
-            label3.Location = new System.Drawing.Point(9, 102);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(146, 16);
-            label3.TabIndex = 14;
-            label3.Text = "Tipo de documento:";
-            // 
-            // comboBoxDocument
-            // 
-            this.comboBoxDocument.FormattingEnabled = true;
-            this.comboBoxDocument.Items.AddRange(new object[] {
-            "DNI",
-            "RUC"});
-            this.comboBoxDocument.Location = new System.Drawing.Point(153, 100);
-            this.comboBoxDocument.Name = "comboBoxDocument";
-            this.comboBoxDocument.Size = new System.Drawing.Size(70, 23);
-            this.comboBoxDocument.TabIndex = 15;
-            this.comboBoxDocument.Text = "RUC";
-            // 
-            // texNumDocumento
-            // 
-            this.texNumDocumento.Location = new System.Drawing.Point(229, 100);
-            this.texNumDocumento.Name = "texNumDocumento";
-            this.texNumDocumento.Size = new System.Drawing.Size(180, 21);
-            this.texNumDocumento.TabIndex = 16;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label4.ForeColor = System.Drawing.Color.Black;
-            label4.Location = new System.Drawing.Point(81, 189);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(74, 16);
-            label4.TabIndex = 18;
-            label4.Text = "Telefono:";
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(155, 187);
-            this.maskedTextBox1.Mask = "000-000-0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(261, 21);
-            this.maskedTextBox1.TabIndex = 19;
-            // 
-            // emailtextBox1
-            // 
-            this.emailtextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.emailtextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emailtextBox1.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailtextBox1.Location = new System.Drawing.Point(153, 235);
-            this.emailtextBox1.Name = "emailtextBox1";
-            this.emailtextBox1.Size = new System.Drawing.Size(263, 24);
-            this.emailtextBox1.TabIndex = 20;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label5.ForeColor = System.Drawing.Color.Black;
-            label5.Location = new System.Drawing.Point(100, 238);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(55, 16);
-            label5.TabIndex = 21;
-            label5.Text = "Emaill:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::SistemaTech.Properties.Resources.My_Icons;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(166, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 62);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
             // 
             // btnBuscar
             // 
@@ -373,6 +336,47 @@
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // proveedorIdTextBox
+            // 
+            this.proveedorIdTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.proveedorIdTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.proveedorIdTextBox.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proveedorIdTextBox.Location = new System.Drawing.Point(155, 33);
+            this.proveedorIdTextBox.Name = "proveedorIdTextBox";
+            this.proveedorIdTextBox.Size = new System.Drawing.Size(112, 24);
+            this.proveedorIdTextBox.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(159, 31);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Proveedores";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(14, 79);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(830, 431);
+            this.tabControl1.TabIndex = 19;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::SistemaTech.Properties.Resources.My_Icons;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(166, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(85, 62);
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
             // 
             // FormProveedores
             // 
@@ -383,8 +387,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormProveedores";
-            this.Text = "FormProveedores";
+            this.Text = "Sistema Almacen";
             this.Load += new System.EventHandler(this.FormProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.tabPage2.ResumeLayout(false);

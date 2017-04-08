@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="Usuarios.cs" />
     <Compile Include="Detalle_Ingreso.cs" />
     <Compile Include="Ingreso.cs" />
     <Compile Include="Presentacion.cs" />

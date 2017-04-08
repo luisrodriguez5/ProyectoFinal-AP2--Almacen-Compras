@@ -20,6 +20,7 @@ namespace DAL
         public DbSet<Presentacion> Presentacion  { get; set; }
         public DbSet<Ingreso> Ingreso  { get; set; }
         public DbSet<Detalle_Ingreso> Detalle_Ingreso { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
 
     }
 }

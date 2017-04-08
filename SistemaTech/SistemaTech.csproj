@@ -76,6 +76,12 @@
     <Compile Include="Consulta\ConsultaCategoria.Designer.cs">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consulta\ConsultaCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consulta\ConsultaCompras.Designer.cs">
+      <DependentUpon>ConsultaCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Consulta\ConsultaProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,11 +114,11 @@
     <Compile Include="Registro\FormCompras.Designer.cs">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registro\FormPresentacion.cs">
+    <Compile Include="Registro\FormPresentaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registro\FormPresentacion.Designer.cs">
-      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    <Compile Include="Registro\FormPresentaciones.Designer.cs">
+      <DependentUpon>FormPresentaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro\FormProductos.cs">
       <SubType>Form</SubType>
@@ -125,6 +131,12 @@
     </Compile>
     <Compile Include="Registro\FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Registro\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Registro\FormVistaCategoria.cs">
       <SubType>Form</SubType>
@@ -150,9 +162,29 @@
     <Compile Include="Registro\FrmProductos_Ingreso.Designer.cs">
       <DependentUpon>FrmProductos_Ingreso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Registro\RegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro\RegistroUsuario.Designer.cs">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\ReporteCategoria .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\ReporteCategoria .Designer.cs">
+      <DependentUpon>ReporteCategoria .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\SistemaTechDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaTechDbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Consulta\ConsultaCategoria.resx">
       <DependentUpon>ConsultaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consulta\ConsultaCompras.resx">
+      <DependentUpon>ConsultaCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consulta\ConsultaProductos.resx">
       <DependentUpon>ConsultaProductos.cs</DependentUpon>
@@ -179,14 +211,17 @@
     <EmbeddedResource Include="Registro\FormCompras.resx">
       <DependentUpon>FormCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registro\FormPresentacion.resx">
-      <DependentUpon>FormPresentacion.cs</DependentUpon>
+    <EmbeddedResource Include="Registro\FormPresentaciones.resx">
+      <DependentUpon>FormPresentaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro\FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro\FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro\FormVistaCategoria.resx">
       <DependentUpon>FormVistaCategoria.cs</DependentUpon>
@@ -200,6 +235,13 @@
     <EmbeddedResource Include="Registro\FrmProductos_Ingreso.resx">
       <DependentUpon>FrmProductos_Ingreso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Registro\RegistroUsuario.resx">
+      <DependentUpon>RegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\CategoriaReportes.rdlc" />
+    <EmbeddedResource Include="Reporte\ReporteCategoria .resx">
+      <DependentUpon>ReporteCategoria .cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,6 +252,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reporte\SistemaTechDbDataSet.xsc">
+      <DependentUpon>SistemaTechDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reporte\SistemaTechDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaTechDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Reporte\SistemaTechDbDataSet.xss">
+      <DependentUpon>SistemaTechDbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -235,6 +288,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SistemaTechDb.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Banned User.png" />
     <None Include="Resources\pencil-scale.png" />
     <None Include="Resources\Remove.png" />
     <None Include="Resources\agregar_p.png" />

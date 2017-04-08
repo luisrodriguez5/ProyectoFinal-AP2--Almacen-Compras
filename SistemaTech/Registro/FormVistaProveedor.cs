@@ -29,7 +29,7 @@ namespace SistemaTech.Registro
         {
             dataListadoProveedor.Columns[0].Visible = false;
             dataListadoProveedor.Columns[1].Visible = false;
-            dataListadoProveedor.Columns[8].Visible = false;
+            dataListadoProveedor.Columns[7].Visible = false;
 
         }
 

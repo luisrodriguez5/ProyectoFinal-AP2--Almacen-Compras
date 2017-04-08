@@ -73,6 +73,16 @@ namespace SistemaTech.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Banned_User {
+            get {
+                object obj = ResourceManager.GetObject("Banned User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Create_New_32px {
             get {
                 object obj = ResourceManager.GetObject("Create New_32px", resourceCulture);

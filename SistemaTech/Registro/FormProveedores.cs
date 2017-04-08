@@ -226,5 +226,16 @@ namespace SistemaTech.Registro
         {
 
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            isNuevo = true;
+              
+          
+            Botones();
+            Limpiar();
+            Habilitar(true);
+            //nombreTextBox.Focus();
+        }
     }
 }

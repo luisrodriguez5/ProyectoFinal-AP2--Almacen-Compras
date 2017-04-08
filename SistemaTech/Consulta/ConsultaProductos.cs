@@ -24,22 +24,22 @@ namespace SistemaTech.Consulta
             InitializeComponent();
         }
 
-        private void MesajeOk(string Mesaje)
-        {
-            MessageBox.Show(Mesaje, "Sistema De Almacen ", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        //Mostrar mesaje de Erro
-        private void MesajeError(string Mesaje)
-        {
-            MessageBox.Show(Mesaje, "Sistema De Almacen ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+       
 
         private void OcultarCulunas()
         {
             dataListadoProducto.Columns[0].Visible = false;
             dataListadoProducto.Columns[1].Visible = false;
             dataListadoProducto.Columns[7].Visible = false;
+        }
+        private void MesajeOk(string Mesaje)
+        {
+            MessageBox.Show(Mesaje, "Sistema De Almacen ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        //Mostrar mesaje de Erro
+        private void MesajeError(string Mesaje)
+        {
+            MessageBox.Show(Mesaje, "Sistema De Almacen ", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private void Listar()
         {

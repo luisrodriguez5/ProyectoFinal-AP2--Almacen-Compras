@@ -130,7 +130,7 @@ namespace SistemaTech
 
         private void presentacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPresentacion frm = new FormPresentacion();
+            FormPresentaciones frm = new FormPresentaciones();
 
             frm.MdiParent = this;
             frm.Show();
@@ -152,6 +152,20 @@ namespace SistemaTech
         private void ingresoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormCompras frm = FormCompras.GetInstancia();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void categoriaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaCategoria frm = new ConsultaCategoria();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void proveedorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormConsultaProveedores frm = new FormConsultaProveedores();
             frm.MdiParent = this;
             frm.Show();
         }

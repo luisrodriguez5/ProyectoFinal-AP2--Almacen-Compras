@@ -12,18 +12,13 @@ namespace Entidades
         [Key]
         public int Detalle_IngresoId { get; set; }
         public int IngresoId { get; set; }
-        public int ProductoId { get; set; }
-        public decimal Costo_Compra { get; set; }
-        public int Inventario_Inicial { get; set; }
-        public int Inventario_Actual { get; set; }
-        public DateTime Fecha_Ingreso { get; set; }
-        public DateTime Fecha_Vencimiento { get; set; }
-        public Productos producto { get; set; }
-        public Ingreso Ingreso { get; set; }
+       
+        public Ingreso ingreso { get; set; }
+       
+       
         public Detalle_Ingreso()
         {
-            Ingreso = new Ingreso();
-            
+           
         }
 
     }

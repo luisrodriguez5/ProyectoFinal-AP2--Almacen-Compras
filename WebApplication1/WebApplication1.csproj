@@ -101,10 +101,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstraptheme.min.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Base.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -114,14 +117,31 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Script\bootstrap.min.js" />
+    <Content Include="Script\jquery-3.2.1.slim.min.js" />
+    <Content Include="UI\Registros\rUsuario.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web1.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base.Master.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Base.Master.designer.cs">
+      <DependentUpon>Base.Master</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Registros\rUsuario.aspx.cs">
+      <DependentUpon>rUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rUsuario.aspx.designer.cs">
+      <DependentUpon>rUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web1.aspx.cs">
       <DependentUpon>Web1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -132,7 +152,28 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\IMG\" />
     <Folder Include="Models\" />
+    <Folder Include="UI\Consulta\" />
+    <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{cb63930a-d564-4c68-a05e-7a9490e0f495}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{d5ca22c6-541f-4e9a-967c-accd2a19d496}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{b87df663-994c-4e0b-a6f6-3ddcace0bcda}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SistemaTech\SistemaTech.csproj">
+      <Project>{9257a163-87c6-4885-b6c4-b59a05ae84e3}</Project>
+      <Name>SistemaTech</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

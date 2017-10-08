@@ -103,6 +103,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstraptheme.min.css" />
+    <Content Include="Content\IMG\Almacen.ico" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -152,7 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\IMG\" />
     <Folder Include="Models\" />
     <Folder Include="UI\Consulta\" />
     <Folder Include="UI\Reportes\" />

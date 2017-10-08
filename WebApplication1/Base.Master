@@ -14,19 +14,43 @@
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstraptheme.min.css" rel="stylesheet" />
-   
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <h1>Siempre</h1>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Almacen</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <!--usuarios-->
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Usuarios <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="UI/Registros/rUsuario.aspx">Registro</a></li>
+                       
+
+                    </ul>
+                </li>
+            </ul>
         </div>
-    </form>
-     <script src="Script/bootstrap.min.js"></script>
-     <script src="Script/jquery-3.2.1.slim.min.js"></script>   
+
+    </nav>
+    <div class="container">
+        <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="Script/bootstrap.min.js"></script>
+    <script src="Script/jquery-3.2.1.slim.min.js"></script>
 </body>
 </html>

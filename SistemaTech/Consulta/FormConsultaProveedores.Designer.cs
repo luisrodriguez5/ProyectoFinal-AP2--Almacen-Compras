@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsultaProveedores));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataListadoProveedor = new System.Windows.Forms.DataGridView();
@@ -167,10 +168,11 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(751, 337);
+            this.tabPage1.Size = new System.Drawing.Size(725, 337);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado De Proveedores";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // label1
             // 
@@ -189,7 +191,7 @@
             this.tabControl1.Location = new System.Drawing.Point(25, 72);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(759, 363);
+            this.tabControl1.Size = new System.Drawing.Size(733, 363);
             this.tabControl1.TabIndex = 22;
             // 
             // pictureBox1
@@ -211,6 +213,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormConsultaProveedores";
             this.Text = "FormProveedores";
             this.Load += new System.EventHandler(this.FormProveedores_Load);

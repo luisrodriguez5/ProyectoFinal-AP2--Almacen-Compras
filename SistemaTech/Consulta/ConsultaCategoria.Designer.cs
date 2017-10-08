@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultaCategoria));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataListadoCategoria = new System.Windows.Forms.DataGridView();
@@ -177,7 +178,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(230, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 31);
             this.label1.TabIndex = 20;
@@ -196,7 +197,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::SistemaTech.Properties.Resources.My_Icons;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(146, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(366, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 62);
             this.pictureBox1.TabIndex = 21;
@@ -211,6 +212,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ConsultaCategoria";
             this.Text = "ConsultaCategoria";
             this.Load += new System.EventHandler(this.ConsultaCategoria_Load);

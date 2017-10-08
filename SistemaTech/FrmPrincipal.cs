@@ -169,5 +169,18 @@ namespace SistemaTech
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroUsuario frm = new RegistroUsuario();
+            frm.MdiParent = this;
+            frm.Show();
+
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

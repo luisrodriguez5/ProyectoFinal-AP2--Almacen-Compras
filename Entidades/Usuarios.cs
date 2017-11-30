@@ -15,7 +15,8 @@ namespace Entidades
         public string NombreUsuario { get; set; }
         public string Clave { get; set; }
         public string ConfirmarClave { get; set; }
-        
+        public DateTime FechaIngreso { get; set; }
+
 
         public Usuarios()
         {
@@ -23,13 +24,14 @@ namespace Entidades
         }
 
 
-        public Usuarios(int usuarioId, string nombres, string nombreUsuario, string clave, string confirmarClave)
+        public Usuarios(int usuarioId, string nombres, string nombreUsuario, string clave, string confirmarClave, DateTime fechaIngreso)
         {
             this.UsuarioId = usuarioId;
             this.Nombres = nombres;
             this.NombreUsuario = nombreUsuario;
             this.Clave = clave;
             this.ConfirmarClave = confirmarClave;
+            this.FechaIngreso = fechaIngreso;
            
         }
 

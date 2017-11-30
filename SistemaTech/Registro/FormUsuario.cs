@@ -63,7 +63,7 @@ namespace SistemaTech.Registro
         {
             if (TxtUsuario.Text == "Admin" && Usuario == null)
             {
-                Usuario = new Usuarios(1, "Luis Rodriguez", "Admin", "1234", "1234");
+               // Usuario = new Usuarios(1, "Luis Rodriguez", "Admin", "1234", "1234");
                 UsuarioBLL.Guardar(Usuario);
 
             ;

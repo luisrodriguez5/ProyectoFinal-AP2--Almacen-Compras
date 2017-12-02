@@ -331,5 +331,15 @@ namespace SistemaTech.Registro
                 MesajeError("No se encuentra detalle para eliminar");
             }
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textProveedorId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

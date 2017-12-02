@@ -15,6 +15,15 @@ namespace SistemaTech
             return numero;
         }
 
+        public static DateTime ToDateTime(string texto)
+        {
+            DateTime fecha = new DateTime(1, 1, 1);
+            DateTime.TryParse(texto, out fecha);
+            return fecha;
+        }
+
+
+
         public static decimal TODECIMAL(string num)
         {
             decimal numero = 0;

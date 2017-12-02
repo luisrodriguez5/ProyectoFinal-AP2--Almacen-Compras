@@ -20,5 +20,14 @@ namespace Entidades
            
 
         }
+        public Categoria(int id, int codigo, string nombre, string descripcion)
+        {
+            this.CategoriaId = id;
+            this.Codigo = codigo;
+            this.Descripcion = descripcion;
+            this.Nombre = nombre;
+     
+                
+        }
     }
 }

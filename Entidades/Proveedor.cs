@@ -9,6 +9,7 @@ namespace Entidades
 {
     public class Proveedor
     {
+      
         [Key]
         public int ProveedorId { get; set; }
         public string Sector_Comercial { get; set; }
@@ -18,13 +19,24 @@ namespace Entidades
         public string Telefono { get; set; }
         public string Email { get; set; }
 
-        
-
         public Proveedor()
         {
-           
 
         }
 
+        
+
+        public Proveedor(int proveedor, string sector_comercia, string razon_social, string direccion, string telefono, string email)
+        {
+            this.ProveedorId = proveedor;
+            this.Sector_Comercial = sector_comercia;
+            this.Razon_Social = razon_social;
+            this.Direccion = direccion;
+            this.Telefono = telefono;
+            this.Email = email;
+
+        }
+
+  
     }
 }

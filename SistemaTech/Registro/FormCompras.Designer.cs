@@ -153,6 +153,7 @@
             this.textProveedorId.Name = "textProveedorId";
             this.textProveedorId.Size = new System.Drawing.Size(69, 20);
             this.textProveedorId.TabIndex = 16;
+            this.textProveedorId.TextChanged += new System.EventHandler(this.textProveedorId_TextChanged);
             // 
             // textProveedor
             // 
@@ -399,6 +400,7 @@
             this.comboBox1.Size = new System.Drawing.Size(100, 21);
             this.comboBox1.TabIndex = 21;
             this.comboBox1.Text = "Factura";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dateFecha
             // 

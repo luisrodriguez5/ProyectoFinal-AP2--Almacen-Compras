@@ -31,12 +31,13 @@ namespace Entidades
             //Relacion = new HashSet<Detalle_Ingreso>();
         }
 
-        public Productos(int productoId, string descripcion, decimal costo, string nombre)
+        public Productos(int productoId, string descripcion, decimal costo, string nombre, string categoria)
         {
             this.ProductoId = productoId;
             this.Descripcion = descripcion;
-            this.Nombre = Nombre;
+            this.Nombre = nombre;
             this.Costo = costo;
+            this.Nombre_Categoria = categoria;
          
         }
 

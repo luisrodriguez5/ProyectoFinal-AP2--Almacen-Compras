@@ -82,6 +82,20 @@ namespace BLL
             }
         }
 
+        public static bool Autenticar(string nombreUsuario, string contrasena)
+        {
+            using (var repositorio = new DAL.Repository<Usuarios>())
+            {
+                foreach (var usuario in GetList(P => P.UsuarioId > 0))
+                {
+                    if (nombreUsuario == usuario.NombreUsuario && contrasena == usuario.Clave)
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
         public static List<Usuarios> GetListAll()
         {
             using (var context = new Repository<Usuarios>())
